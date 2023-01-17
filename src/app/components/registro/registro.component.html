@@ -1,0 +1,28 @@
+<div>
+    <h3>Crear Usuario</h3>
+    <form (ngSubmit) = "enviarUsuario()">
+        <input [(ngModel)] = "user.first_name" name = "first_name" placeholder="Digite su nombre">
+        <input [(ngModel)] = "user.last_name" name = "last_name" placeholder="Digite su apellido">
+        <input [(ngModel)] = "user.email" name = "email" placeholder="Digite su email">
+        <button>Crear usuario</button>
+    </form>
+</div>
+<div>
+    <h3>Usuarios</h3>
+    <table >
+        <thead >
+          <tr>
+            <th class="col-lg-1">nombre</th>
+            <th class="col-lg-3">email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of usuarios">
+            <td>{{item.first_name}}</td>
+            
+            <td>{{item.email}}</td>
+          </tr>
+        </tbody>
+    </table>
+    
+</div>
